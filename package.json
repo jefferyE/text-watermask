@@ -1,0 +1,47 @@
+{
+  "name": "@dong/text-watermask",
+  "version": "0.1.1",
+  "description": "A watermask plugin for staic text or dynamic text!",
+  "main": "dist/watermask.min.js",
+  "browser": "dist/watermask.min.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefferyE/text-watermask.git"
+  },
+  "keywords": [
+    "dplayer",
+    "vue",
+    "video",
+    "javascript",
+    "vue-dplayer",
+    "html5",
+    "flv",
+    "m3u8",
+    "mp4",
+    "hls"
+  ],
+  "author": "jefferyE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jefferyE/vue-dplayer2/issues"
+  },
+  "homepage": "https://github.com/jefferyE/vue-dplayer2#readme",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "rollup": "^2.28.2",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-preset-latest": "^6.24.1",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-uglify": "^6.0.0"
+  }
+}
