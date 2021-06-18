@@ -14,16 +14,10 @@
     "url": "git+https://github.com/jefferyE/text-watermask.git"
   },
   "keywords": [
-    "dplayer",
-    "vue",
-    "video",
-    "javascript",
-    "vue-dplayer",
-    "html5",
-    "flv",
-    "m3u8",
-    "mp4",
-    "hls"
+    "text",
+    "watermask",
+    "canvas",
+    "javascript"
   ],
   "author": "jefferyE",
   "license": "MIT",
