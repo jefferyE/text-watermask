@@ -2,7 +2,7 @@ import './canvas-polyfill';
 
 function Watermask (settings = {}) {
   this.settings = Object.assign({
-    text: '我是水印文字 哈哈',
+    text: 'watermask',
     mode: 'image',
     wrapper: document.body,
     space: 5,
@@ -62,14 +62,19 @@ Watermask.prototype.getSizeByText = function (text) {
   el.style.fontFamily = fontFamily;
   el.style.color = color;
   el.style.opacity = 0;
-  document.body.appendChild(el);
   el.style.transform = `rotate(${rotate}deg)`;
 
-  const rect = el.getBoundingClientRect();
+  document.body.appendChild(el);
+
   const textWidth = el.offsetWidth;
   const textHeight = el.offsetHeight;
+  el.style.width = `${textWidth}px`;
+  el.style.height = `${textHeight}px`;
+
+  const rect = el.getBoundingClientRect();
   const renderWidth = rect.right - rect.left;
   const renderHeight = rect.bottom - rect.top;
+
   document.body.removeChild(el);
 
   return { textWidth, textHeight, renderWidth, renderHeight, el };
@@ -131,7 +136,7 @@ Watermask.prototype.createHtmlByText = function (text) {
   fragment.style.position = 'absolute';
   fragment.style.top = '0';
   fragment.style.left = '0';
-  fragment.style.zIndex = 0;
+  fragment.style.zIndex = -1;
   fragment.style.width = '100%';
   fragment.style.height = '100%';
   fragment.style.overflow = 'hidden';

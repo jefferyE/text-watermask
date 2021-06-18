@@ -14,14 +14,15 @@
   </style>
 </head>
 <body>
-  <div id="watermark" style="width: 100%; height: 100%;">
-    text watermask by canvas to image!
+  <div id="watermark" style="width: 100%; height: 100%; text-align: center;">
+    <h2>水印效果</h2>
+    <span style="display: inline-block; margin: 50px auto;">通过`html`模式创建的水印，清晰度高</span>
   </div>
-  <script src="./text-watermark.js"></script>
+  <script src="../../dist/watermask.min.js"></script>
   <script>
     const watermask = new Watermask({
       text: '张三 66688',
-      type: 'image',
+      mode: 'html',
       onSuccess: (data) => {
         console.log('watermask data: ', data);
       }

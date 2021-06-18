@@ -4,11 +4,13 @@ A watermask plugin for staic text or dynamic text!
 
 # Example
 
-![IMAGE Demo](/snapshots/image-watermask.png)
-
-![HTML Demo](/snapshots/html-watermask.png)
-
 [More Example Code](https://github.com/jefferyE/text-watermask/tree/master/examples)
+
+## Mode: image
+![image](/snapshots/image-watermask.png)
+
+## Mode: html
+![html](/snapshots/html-watermask.png)
 
 # Install
 
@@ -16,7 +18,6 @@ A watermask plugin for staic text or dynamic text!
 import Watermask from '@shaodong/text-watermask';
 
 ```
-
 # Usage
 
 ```
@@ -26,8 +27,7 @@ new Watermask({
 });
 
 ```
-
-### Options
+# Options
 
 |  Key  | Type  |  Default  | Description  |
 |  ----  | ----  |  ----  | ----  |

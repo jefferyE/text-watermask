@@ -7,7 +7,7 @@ export default [{
   input: 'src/index.js',
   output: {
     // 输出变量名
-    name: 'watermask',
+    name: 'Watermask',
     // 输出文件名
     file: pkg.browser,
     format: 'umd'
