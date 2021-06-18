@@ -11,7 +11,7 @@ A watermask plugin for staic text or dynamic text!
 # Install
 
 ```
-import Watermask from '@dong/text-watermask';
+import Watermask from '@shaodong/text-watermask';
 
 ```
 
