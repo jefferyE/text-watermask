@@ -4,7 +4,9 @@ A watermask plugin for staic text or dynamic text!
 
 # Example
 
-[Demo Page]()
+![IMAGE Demo](/snapshots/image-watermask.png)
+
+![HTML Demo](/snapshots/html-watermask.png)
 
 [More Example Code](https://github.com/jefferyE/text-watermask/tree/master/examples)
 
