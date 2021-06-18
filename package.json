@@ -1,6 +1,6 @@
 {
   "name": "@shaodong/text-watermask",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A watermask plugin for staic text or dynamic text!",
   "main": "dist/watermask.min.js",
   "browser": "dist/watermask.min.js",
