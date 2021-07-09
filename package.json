@@ -1,6 +1,6 @@
 {
   "name": "@shaodong/text-watermask",
-  "version": "0.2.6",
+  "version": "0.2.8",
   "description": "A watermask plugin for staic text or dynamic text!",
   "main": "dist/watermask.min.js",
   "browser": "dist/watermask.min.js",
@@ -19,7 +19,7 @@
     "canvas",
     "javascript"
   ],
-  "author": "jefferyE",
+  "author": "adongge",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jefferyE/text-watermask/issues"

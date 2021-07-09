@@ -31,7 +31,7 @@ function Watermask (settings = {}) {
 }
 
 Watermask.prototype.init = function () {
-  const { mode, text } = this.settings;
+  const { text } = this.settings;
   const { textWidth, textHeight, renderWidth, renderHeight, el } = this.getSizeByText(text);
 
   this.textWidth = textWidth;
@@ -43,6 +43,16 @@ Watermask.prototype.init = function () {
   this.cols = 0;
   this.data = null;
 
+  this.render();
+
+  const self = this;
+  window.onresize = function () {
+    self.render();
+  }
+}
+
+Watermask.prototype.render = function () {
+  const { mode, text } = this.settings;
   if (mode === 'image') {
     this.createImageByText(text);
   } else {
@@ -94,8 +104,8 @@ Watermask.prototype.createImageByText = function (text) {
   const width = this.renderWidth * pixelRatio;
   const height = this.renderHeight * pixelRatio;
 
-  canvas.width = this.width = width;
-  canvas.height = this.height = height;
+  canvas.width = this.canvasWidth = width;
+  canvas.height = this.canvasHeight = height;
 
   canvas.getContext('2d'); // 基于context.backingStorePixelRatio重新计算
   
@@ -130,9 +140,10 @@ Watermask.prototype.createHtmlByText = function (text) {
 
   this.rows = rows + 2;
   this.cols = cols + 2;
+  this.className = 'text-watermask';
 
   const fragment = document.createElement('div');
-  fragment.className = 'text-watermask';
+  fragment.className = this.className;
   fragment.style.position = 'absolute';
   fragment.style.top = '0';
   fragment.style.left = '0';
@@ -166,6 +177,10 @@ Watermask.prototype.createHtmlByText = function (text) {
   this.data = fragment;
 
   if (wrapper) {
+    const oldFrament = document.body.querySelector(`.${this.className}`);
+    if (oldFrament) {
+      wrapper.removeChild(oldFrament);
+    }
     wrapper.appendChild(fragment);
   }
 
