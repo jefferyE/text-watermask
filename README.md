@@ -37,6 +37,8 @@ console.log(watermask); // 实例属性请参考：Attributes
 | mode  | string | 'image' | 水印的模式: `image` 及 `html`，建议使用 html 模式 |
 | wrapper  | HTMLElement | document.body | 自动渲染时 DOM 元素，默认使用 document.body，如传入null，则不会自动挂载，可在 onSucess 回调中拿到最终的结果，即实例属性 data |
 | space  | number | 5 | 水印文字间隔，会当做 padding 使用，如果想水印不太密集，可增加 space 值 |
+| horizontalSpace  | number | - | 水印文字水平方向间隔，会当做 paddingLeft 和 paddingRight 使用，若不传，则使用 space 值 |
+| verticalSpace  | number | - | 水印文字垂直方向间隔，会当做 paddingTop 和 paddingBottom 使用，若不传，则使用 space 值 |
 | rotate  | number | -45 | 水印文字旋转角度 |
 | opacity  | number | 1 | 水印文字透明度 |
 | fontSize  | string | '16px' | 水印文字大小 |

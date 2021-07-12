@@ -27,6 +27,13 @@ function Watermask (settings = {}) {
     return;
   }
 
+  if (!this.settings.space) {
+    this.settings.space = 0;
+  }
+
+  this.settings.horizontalSpace = this.settings.horizontalSpace || this.settings.space;
+  this.settings.verticalSpace = this.settings.verticalSpace || this.settings.space;
+
   this.init();
 }
 
@@ -61,11 +68,11 @@ Watermask.prototype.render = function () {
 }
 
 Watermask.prototype.getSizeByText = function (text) {
-  const { space, fontSize, fontFamily, rotate, color, textAlign, verticalAlign } = this.settings;
+  const { verticalSpace, horizontalSpace, fontSize, fontFamily, rotate, color, textAlign, verticalAlign } = this.settings;
   const el = document.createElement('span');
   el.innerHTML = text;
   el.style.display = 'inline-block';
-  el.style.padding = `${space || 0}px`;
+  el.style.padding = `${verticalSpace}px ${horizontalSpace}px`;
   el.style.textAlign = textAlign;
   el.style.verticalAlign = verticalAlign;
   el.style.fontSize = fontSize;
